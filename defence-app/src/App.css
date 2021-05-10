@@ -1,0 +1,41 @@
+/* My CSS styles */
+
+/* SignUp Page */
+.SignUpPage {
+  position: relative;
+}
+.SignUpContainer {
+  width: 40%;
+  background-color: #282c34;
+  padding: 2rem;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Header */
+.HeaderContainer {
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #282c34;
+  color: aliceblue;
+  padding: 0.3rem 2rem;
+}
+
+.HeaderDiv {
+  display: flex;
+}
+
+.HeaderItem {
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, "Arial Narrow", Arial,
+    sans-serif, Courier, monospace;
+}
+
+.HeaderItem:hover {
+  cursor: pointer;
+}

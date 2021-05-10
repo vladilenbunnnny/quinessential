@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Nav, NavItem, NavLink } from "reactstrap";
+import React from "react";
+import HeaderLoggedOut from "./HeaderLoggedOut";
+import { useAuth } from "../contexts/AuthContext";
+import HeaderLoggedIn from "./HeaderLoggedIn";
 
 function Header() {
-  return (
-    <header>
-      <Nav>
-        <NavItem>
-          <NavLink>Home</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Check Eligibility</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>About</NavLink>
-        </NavItem>
-      </Nav>
-    </header>
-  );
+  const { currentUser } = useAuth();
+
+  if (currentUser) {
+    return <HeaderLoggedIn />;
+  }
+
+  return <HeaderLoggedOut />;
 }
 
 export default Header;
